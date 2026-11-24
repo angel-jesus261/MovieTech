@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineTech | Cartelera</title>
+  <link rel="icon" type="image/png" href="assets/logo-cinetech.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="cartelera">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">▶</span> Movie<span>Tech</span></a>
+  <nav><a class="active" href="index.html">Cartelera</a><a href="dulceria.html">Dulcería</a></nav>
+  <a class="nav-button" href="#cartelera">Comprar entradas</a>
+</header>
+<main>
+  <section class="hero hero-home">
+    <div class="hero-copy">
+      <span class="eyebrow">VIVE EL CINE A TU MANERA</span>
+      <h1>Tu próxima película<br><em>te está esperando.</em></h1>
+      <p>Elige qué quieres ver. Después podrás escoger tu función, tus butacas y tus snacks favoritos.</p>
+      <a class="gold-button" href="#cartelera">Explorar cartelera <span>→</span></a>
+    </div>
+    <div class="hero-decoration" aria-hidden="true"><div class="reel"></div><div class="hero-ticket"><small>MovieTech PRESENTA</small><b>UNA GRAN<br>NOCHE DE CINE</b><span>★ ★ ★ ★ ★</span></div></div>
+    <div class="hero-bottom">● ESTRENOS · EXPERIENCIAS · DULCERÍA</div>
+  </section>
+
+  <section class="content-section" id="cartelera">
+    <div class="section-top"><div><span class="eyebrow">ELIGE TU PRÓXIMA AVENTURA</span><h2>Películas en cartelera</h2></div><span class="section-hint">Selecciona una película para continuar</span></div>
+    <div class="movie-grid">
+      <button class="movie-card" type="button" data-movie="Ojo por ojo: La Gran Sangre" data-price="18" data-poster="assets/ojo-por-ojo.jpg">
+        <div class="poster poster-ojo"><img src="assets/ojo-por-ojo.png" alt="Afiche de Ojo por ojo: La Gran Sangre" onerror="this.remove()"><span class="poster-label">ACCIÓN · PERÚ</span><div class="poster-art art-ojo"><span class="poster-kicker">LA GRAN SANGRE</span><b>OJO<br>X OJO</b><small>LA JUSTICIA NO OLVIDA</small></div><span class="poster-fallback">Imagen de cartelera<br><small>Reemplaza por el afiche oficial</small></span></div>
+        <div class="movie-meta"><div><h3>Ojo X ojo: La Gran Sangre</h3><p>Acción · Suspenso</p></div><b>S/ 18</b></div>
+        <span class="select-mark">✓ Seleccionada</span>
+      </button>
+      <button class="movie-card" type="button" data-movie="Los juegos del hambre" data-price="18" data-poster="assets/juegos-del-hambre.jpg">
+        <div class="poster poster-hunger"><img src="assets/juegos-del-hambre.png" alt="Afiche de Los juegos del hambre" onerror="this.remove()"><span class="poster-label">AVENTURA</span><div class="poster-art"><span class="poster-kicker">QUE LA SUERTE</span><b>JUEGOS<br>DEL HAMBRE</b><small>COMIENCE A TU FAVOR</small></div><span class="poster-fallback">Imagen de cartelera<br><small>Reemplaza por el afiche oficial</small></span></div>
+        <div class="movie-meta"><div><h3>Los juegos del hambre</h3><p>Aventura · Ciencia ficción</p></div><b>S/ 18</b></div>
+        <span class="select-mark">✓ Seleccionada</span>
+      </button>
+      <button class="movie-card" type="button" data-movie="Avengers: Doomsday" data-price="20" data-poster="assets/avengers-doomsday.jpg">
+        <div class="poster poster-avengers"><img src="assets/avengers-doomsday.png" alt="Afiche de Avengers: Doomsday" onerror="this.remove()"><span class="poster-label">PRÓXIMAMENTE</span><div class="poster-art"><span class="poster-kicker"></span><b>AVENGERS</b><strong>DOOMSDAY</strong><small>EL DESTINO SE ACERCA</small></div><span class="poster-fallback">Imagen de cartelera<br><small>Reemplaza por el afiche oficial</small></span></div>
+        <div class="movie-meta"><div><h3>Avengers: Doomsday</h3><p>Acción · Fantasía</p></div><b>S/ 20</b></div>
+        <span class="select-mark">✓ Seleccionada</span>
+      </button>
+      <button class="movie-card" type="button" data-movie="Yo soy Rocky" data-price="18" data-poster="assets/yo-soy-rocky.jpg">
+        <div class="poster poster-rocky"><img src="assets/yo-soy-rocky.png" alt="Afiche de Yo soy Rocky" onerror="this.remove()"><span class="poster-label">BIOGRAFÍA</span><div class="poster-art"><span class="poster-kicker">UNA HISTORIA DE LUCHA</span><b>YO SOY<br>ROCKY</b><small>NUNCA DEJES DE PELEAR</small></div><span class="poster-fallback">Imagen de cartelera<br><small>Reemplaza por el afiche oficial</small></span></div>
+        <div class="movie-meta"><div><h3>Yo soy Rocky</h3><p>Drama · Biografía</p></div><b>S/ 18</b></div>
+        <span class="select-mark">✓ Seleccionada</span>
+      </button>
+      <button class="movie-card" type="button" data-movie="Thunderbolts*" data-price="18" data-poster="assets/thunderbolts.jpg">
+        <div class="poster poster-thunder"><img src="assets/thunderbolts.png" alt="Afiche de Thunderbolts" onerror="this.remove()"><span class="poster-label">ACCIÓN</span><div class="poster-art"><span class="poster-kicker"></span><b><br></b><small>LOS HÉROES NO SON TAN HEROICOS</small></div><span class="poster-fallback">Imagen de cartelera<br><small>Reemplaza por el afiche oficial</small></span></div>
+        <div class="movie-meta"><div><h3>Thunderbolts*</h3><p>Acción · Aventura</p></div><b>S/ 18</b></div>
+        <span class="select-mark">✓ Seleccionada</span>
+      </button>
+    </div>
+    <div class="continue-bar">
+      <div><span class="eyebrow">TU PELÍCULA</span><strong id="chosenMovie">Ninguna película seleccionada</strong><small id="chosenPrice">Elige una de las opciones de arriba</small></div>
+      <button class="gold-button" id="continueToBooking" type="button" disabled>Elegir función y dulcería <span>→</span></button>
+    </div>
+  </section>
+</main>
+<footer><a class="brand" href="index.html">Movie<span>Tech</span></a><p>Tu historia comienza en la pantalla. © 2026 MovieTech.</p></footer>
+</body>
+</html>

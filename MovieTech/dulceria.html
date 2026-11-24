@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieTech | Tu función y dulcería</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="compra">
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">▶</span> Movie<span>Tech</span></a>
+  <nav><a href="index.html">Cartelera</a><a class="active" href="#dulceria">Dulcería</a></nav>
+  <a class="nav-button" href="index.html">Cambiar película</a>
+</header>
+<main>
+  <section class="booking-hero">
+    <span class="eyebrow">CASI ESTÁ TODO LISTO</span>
+    <h1>Prepara tu <em>MovieTech.</em></h1>
+    <p>Selecciona la fecha, el horario, tus butacas y algo rico para disfrutar.</p>
+    <div class="progress"><span class="done">1. Película</span><i></i><span class="current">2. Función y dulcería</span><i></i><span>3. Confirmación</span></div>
+  </section>
+  <section class="booking-layout">
+    <div class="booking-main">
+      <div class="panel">
+        <div class="panel-title"><span class="step-number">01</span><div><h2>Tu película</h2><p>La película que seleccionaste en cartelera.</p></div></div>
+        <div class="chosen-film"><div class="chosen-film-art" id="chosenFilmArt">▶</div><div><span class="eyebrow">TU ELECCIÓN</span><h3 id="bookingMovie">Selecciona una película</h3><p id="bookingGenre">CineNova · Sala 1</p><b id="bookingTicketPrice">S/ 0.00 por entrada</b></div><a href="index.html">Cambiar</a></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title"><span class="step-number">02</span><div><h2>Fecha y horario</h2><p>Elige cuándo quieres venir al cine.</p></div></div>
+        <div class="field-grid"><label>Fecha de la función<input type="date" id="showDate"></label><label>Hora de la función<select id="showTime"><option value="14:00">2:00 p. m.</option><option value="16:30">4:30 p. m.</option><option value="19:00" selected>7:00 p. m.</option><option value="21:30">9:30 p. m.</option><option value="23:30">11:30 p. m.</option></select></label></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title"><span class="step-number">03</span><div><h2>Escoge tus butacas</h2><p>Los asientos oscuros ya están ocupados.</p></div></div>
+        <div class="screen-wrap"><div class="screen"></div><span>PANTALLA</span></div>
+        <div class="seat-legend"><span><i class="seat-sample available"></i> Disponible</span><span><i class="seat-sample chosen"></i> Tu asiento</span><span><i class="seat-sample occupied"></i> Ocupado</span></div>
+        <div class="seat-map" id="seatMap"></div><p class="seat-hint" id="seatHint">Puedes seleccionar hasta 8 butacas.</p>
+      </div>
+      <div class="panel" id="dulceria">
+        <div class="panel-title"><span class="step-number">04</span><div><h2>Dulcería</h2><p>Agrega tus snacks favoritos a tu pedido.</p></div></div>
+        <div class="snack-list">
+          <article class="snack"><div class="snack-emoji">🍿</div><div class="snack-info"><b>Cancha clásica</b><small>Porción grande</small><strong>S/ 12.00</strong></div><div class="quantity"><button type="button" data-snack="popcorn" data-change="-1">−</button><span id="popcornQty">0</span><button type="button" data-snack="popcorn" data-change="1">+</button></div></article>
+          <article class="snack"><div class="snack-emoji">🥤</div><div class="snack-info"><b>Gaseosa grande</b><small>Vaso de 750 ml</small><strong>S/ 9.00</strong></div><div class="quantity"><button type="button" data-snack="soda" data-change="-1">−</button><span id="sodaQty">0</span><button type="button" data-snack="soda" data-change="1">+</button></div></article>
+          <article class="snack"><div class="snack-emoji">🍫</div><div class="snack-info"><b>Chocolate</b><small>Barra personal</small><strong>S/ 6.00</strong></div><div class="quantity"><button type="button" data-snack="chocolate" data-change="-1">−</button><span id="chocolateQty">0</span><button type="button" data-snack="chocolate" data-change="1">+</button></div></article>
+          <article class="snack"><div class="snack-emoji">🍿</div><div class="snack-info"><b>Combo pareja</b><small>2 canchas + 2 gaseosas</small><strong>S/ 36.00</strong></div><div class="quantity"><button type="button" data-snack="combo" data-change="-1">−</button><span id="comboQty">0</span><button type="button" data-snack="combo" data-change="1">+</button></div></article>
+        </div>
+      </div>
+    </div>
+    <aside class="panel order-summary">
+      <span class="eyebrow">RESUMEN DE TU PEDIDO</span><h2>Tu compra</h2>
+      <div class="summary-film"><div class="summary-thumb" id="summaryThumb">▶</div><div><b id="summaryMovie">Película no seleccionada</b><small id="summaryDate">Elige una fecha</small><small id="summaryTime">7:00 p. m.</small></div></div>
+      <div class="summary-line"><span>Entradas <small id="seatCount">(0)</small></span><b id="ticketTotal">S/ 0.00</b></div>
+      <div class="summary-line"><span>Dulcería</span><b id="snackTotal">S/ 0.00</b></div>
+      <div class="seat-summary"><small>BUTACAS</small><p id="selectedSeats">Aún no has elegido</p></div>
+      <div class="total-line"><span>Total</span><strong id="grandTotal">S/ 0.00</strong></div>
+      <button class="gold-button full-button" id="checkoutBtn" type="button">Finalizar compra <span>→</span></button>
+      <p class="secure-note">🔒 Confirmación de compra de demostración</p>
+      <p class="fine-print">No se realizará ningún cobro real. Los precios y asientos son editables en el código.</p>
+    </aside>
+  </section>
+</main>
+<footer><a class="brand" href="index.html">Movie<span>Tech</span></a><p>Gracias por elegir MovieTech. © 2026.</p><a href="index.html">Volver a cartelera ↑</a></footer>
+<div class="modal hidden" id="purchaseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card"><button class="modal-close" id="closeModal" aria-label="Cerrar">×</button><div class="success-icon">✓</div><span class="eyebrow">RESERVA REGISTRADA</span><h2 id="modalTitle">¡Compra realizada correctamente!</h2><p class="modal-intro">Tu experiencia de cine está preparada. Este es tu comprobante de demostración.</p><div class="receipt" id="receipt"></div><button class="gold-button full-button" id="finishBtn" type="button">Volver a cartelera</button><small class="demo-warning">Esta web no procesa pagos reales ni emite entradas válidas.</small></div>
+</div>
+</body>
+</html>
